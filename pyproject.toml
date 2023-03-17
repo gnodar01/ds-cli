@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ds-cli"
+version = "0.1.0"
+description = "A CLI helper for [Distributed-Something](https://github.com/DistributedScience/Distributed-Something)"
+authors = ["Nodar Gogoberidze <gnodar01@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "ds_cli"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
