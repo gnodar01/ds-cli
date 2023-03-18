@@ -12,9 +12,13 @@ keywords = ["Distributed-Something", "DistributedScience"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+click = "^8.1.3"
 
 [tool.poetry.dev-dependencies]
 
+
+[tool.poetry.scripts]
+dscli = "ds_cli.console:main"
 
 [build-system]
 requires = ["poetry-core"]
