@@ -8,7 +8,7 @@ readme = "README.md"
 homepage = "https://distributedscience.github.io/Distributed-Something/introduction.html"
 repository = "https://github.com/gnodar01/ds-cli"
 keywords = ["Distributed-Something", "DistributedScience"]
-packages = [{include = "ds_cli"}]
+#packages = [{include = "ds_cli"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
