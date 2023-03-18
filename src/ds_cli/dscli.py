@@ -1,12 +1,22 @@
-import click
+from rich import print as rprint
+import rich_click as rclick
 
-from . import __version__
+from . import __version__, CONTEXT_SETTINGS
+from .styles import DS_GREEN_TRUE
 
-CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 
-@click.command(context_settings=CONTEXT_SETTINGS)
-@click.version_option(version=__version__)
+@rclick.command(context_settings=CONTEXT_SETTINGS)
+def hello():
+    """Say Hello to the world"""
+    rprint(f"[{DS_GREEN_TRUE}]Hello[/], [bold magenta]World[/]!", ":vampire:")
+    rclick.secho(f"Hello, [bold magenta]World[/bold magenta]! :vampire:")
+
+@rclick.version_option(__version__, '-v', '--version')
+@rclick.group(context_settings=CONTEXT_SETTINGS)
 def main():
-    """Distributed-Something Command Line Interface"""
-    click.echo("Hello, World!")
+    """
+    Command Line Interface for [bold #59559E link=https://distributedscience.github.io/Distributed-Something]Distributed-Something[/]
+    """
+    pass
 
+main.add_command(hello)
