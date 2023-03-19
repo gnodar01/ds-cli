@@ -3,5 +3,5 @@ import pytest
 
 
 @pytest.fixture(scope="function")
-def runner():
+def runner() -> click.testing.CliRunner:
     return click.testing.CliRunner()

@@ -42,10 +42,11 @@ def lint(session):
     install_with_constraints(
         session,
         "flake8",
-        "flake8-black",
-        "flake8-import-order",
-        "flake8-bugbear",
+        "flake8-annotations",
         "flake8-bandit",
+        "flake8-black",
+        "flake8-bugbear",
+        "flake8-import-order",
     )
     session.run("flake8", *args)
 

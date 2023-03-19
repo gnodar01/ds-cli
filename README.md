@@ -80,6 +80,8 @@ Black auto-formatting is not run by default when running `nox` in isolation, it 
   - `B950` replaces `E501` for max line length checking (adds tolerance margin of 10%)
 - [flake8-bandit](https://github.com/tylerwince/flake8-bandit) plugin - uses [Bandit](https://github.com/PyCQA/bandit) to find common security issues
   - issues reported as `S`
+- [flake8-annotations](https://github.com/sco1/flake8-annotations) plugin - detects absence of type annotations for functions
+  - issues reported as `ANN`
 
 All of these are configured in the `.flake8` file.
 

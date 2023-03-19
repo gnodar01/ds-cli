@@ -6,7 +6,7 @@ from .commands.hello import hello
 
 @rclick.version_option(__version__, "-v", "--version")
 @rclick.group(context_settings=CONTEXT_SETTINGS)
-def main():
+def main() -> None:
     """
     Command Line Interface for [bold #59559E link=https://distributedscience.github.io/Distributed-Something]Distributed-Something[/]
     """  # noqa: B950
