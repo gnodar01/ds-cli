@@ -41,4 +41,10 @@ Let Poetry install the rest from `pyproject.toml`
 
 [Coverage.py](https://coverage.readthedocs.io/en/7.2.2/) is used for test coverage, alongside [pytest](https://docs.pytest.org/en/7.2.x/), via the [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/) plugin.
 
-Run `pytest --cov`.
+To run the tests directly, in you virtual environment, run `pytest --cov`.
+
+To let nox run across multiple isolated environments, run `nox`.
+
+To avoid nox recreating the virtual environments from scratch on each invocation, run `nox -r`.
+
+Run a specific test with `nox -- tests/test_TESTNAME`.
