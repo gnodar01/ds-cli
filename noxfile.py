@@ -38,7 +38,7 @@ def safety(session):
             "poetry",
             "export",
             "--with",
-            "dev",
+            "dev,test",
             "--without-hashes",
             "--format=requirements.txt",
             "--output",
