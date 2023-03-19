@@ -57,6 +57,26 @@ Run formatting with `nox -s black` or specify files/directors with `nox -s black
 
 Black auto-formatting is not run by default when running `nox` in isolation, it must be specified.
 
-[Flake8](https://flake8.pycqa.org/en/latest/) is used for linting. Under the hood, it uses [pylint](https://www.pylint.org/), [pyflakes](https://github.com/PyCQA/pyflakes) for invalid python code (errors reported as `F`), [pycodestyle](https://github.com/pycqa/pycodestyle) for [PEP 8](https://peps.python.org/pep-0008/) style checking (`W` for warnings, `E` for errors), and [mccabe](https://github.com/PyCQA/mccabe) for code complexity (errors reported as `C`). Adherence to Black code style is performed via the [flake8-black](https://github.com/peterjc/flake8-black) plugin (erros reported as `BLK`). Import grouping and ordering is checked against the [Google styleguide](https://google.github.io/styleguide/pyguide.html?showone=Imports_formatting#313-imports-formatting) via the [flake8-import-order](https://github.com/PyCQA/flake8-import-order) plugin (errors reported as `I`). All of these are configured in the `.flake8` file.
+[Flake8](https://flake8.pycqa.org/en/latest/) is used for linting. Under the hood, it uses:
+
+- [pylint](https://www.pylint.org/)
+- [pyflakes](https://github.com/PyCQA/pyflakes) - invalid python code
+  - errors reported as `F`
+- [pycodestyle](https://github.com/pycqa/pycodestyle) - [PEP 8](https://peps.python.org/pep-0008/) style checking
+  - `W` for warnings, `E` for errors
+- [mccabe](https://github.com/PyCQA/mccabe) - code complexity
+  - errors reported as `C`.
+- [flake8-black](https://github.com/peterjc/flake8-black) plugin - adherence to Black code style
+  - erros reported as `BLK`.
+- [flake8-import-order](https://github.com/PyCQA/flake8-import-order) plugin - import grouping and ordering checked against the [Google styleguide](https://google.github.io/styleguide/pyguide.html?showone=Imports_formatting#313-imports-formatting)
+  - errors reported as `I`
+- [flake8-bugbear](https://github.com/PyCQA/flake8-bugbear) plugin - various miscellaneous bugs and design problems
+  - likely bugs reported as `B`
+  - opinionated bugs reported as `B9`
+  - `B950` replaces `E501` for max line length checking (adds tolerance margin of 10%)
+
+All of these are configured in the `.flake8` file.
 
 Run linting with `nox -s lint` or specify files/directoriess with `nox -s lint -- file1 dir1 ...`.
+
+Import ordering is not auto-formatted although may in the future by migrating to [flake8-isort](https://github.com/gforcada/flake8-isort).
