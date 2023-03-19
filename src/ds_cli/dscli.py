@@ -10,7 +10,7 @@ from .commands.hello import hello
 def main():
     """
     Command Line Interface for [bold #59559E link=https://distributedscience.github.io/Distributed-Something]Distributed-Something[/]
-    """
+    """  # noqa: E501
     ...
 
 

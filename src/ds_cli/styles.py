@@ -11,7 +11,7 @@ RICH_PURPLE = "medium_purple4"  # #5F5F87
 DS_PURPLE_LIGHT = "#59559E"
 DS_PURPLE_DARK = "#464272"
 
-# configuration options: https://github.com/ewels/rich-click#configuration-options
+# configuration options: https://github.com/ewels/rich-click#configuration-options  # noqa: E501
 
 rclick.rich_click.USE_RICH_MARKUP = True
 
