@@ -29,5 +29,6 @@ MANIFEST
 .nox/
 .cache
 .pytest_cache/
+.coverage
 
 .vscode

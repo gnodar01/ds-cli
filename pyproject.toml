@@ -17,10 +17,27 @@ rich-click = "^1.6.1"
 [tool.poetry.scripts]
 dscli = "ds_cli.dscli:main"
 
-[tool.poetry.group.dev.dependencies]
+[tool.poetry.group.test.dependencies]
 pytest = "^7.2.2"
+coverage = {extras = ["toml"], version = "^7.2.2"}
+pytest-cov = "^4.0.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
+[tool.coverage.paths]
+# lists of file paths that should be considered equivalent when combining data
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+# whether to measure branch coverage in addition to statement coverage
+# ie when line in program can jump to more than one next line (eg conditional)
+branch = true
+# (multi-string) A list of packages or directories
+# the source to measure during execution
+source = ["ds_cli"]
+
+[tool.coverage.report]
+# When running a summary report, show missing lines
+show_missing = true
