@@ -25,7 +25,6 @@ share/python-wheels/
 MANIFEST
 
 # Unit test / coverage reports
-.tox/
 .nox/
 .cache
 .pytest_cache/
