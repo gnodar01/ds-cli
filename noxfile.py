@@ -19,7 +19,13 @@ def black(session):
 def lint(session):
     # override with nox -s lint -- arg1 arg2 ...
     args = session.posargs or locations
-    session.install("flake8", "flake8-black", "flake8-import-order", "flake8-bugbear")
+    session.install(
+        "flake8",
+        "flake8-black",
+        "flake8-import-order",
+        "flake8-bugbear",
+        "flake8-bandit",
+    )
     session.run("flake8", *args)
 
 
