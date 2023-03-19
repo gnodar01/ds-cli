@@ -6,7 +6,10 @@ from ..styles import DS_GREEN
 
 
 @rclick.command(context_settings=CONTEXT_SETTINGS)
-def hello():
+@rclick.option(
+    '--say',
+    help='Who to say hello to.'
+)
+def hello(say):
     '''Say Hello to the world'''
-    rprint(f'[{DS_GREEN}]Hello[/], [bold magenta]World[/]!', ':vampire:')
-    rclick.secho(f'Hello, [bold magenta]World[/bold magenta]! :vampire:')
+    rprint(f'[{DS_GREEN}]Hello[/]{f", [bold magenta]{say}[/]!" if say else ""}', ':vampire:')
