@@ -1,15 +1,10 @@
 import nox
 
 
+nox.options.sessions = "lint", "tests"
+
+
 locations = "src", "tests", "noxfile.py"
-
-
-@nox.session(python=["3.8"])
-def lint(session):
-    # override with nox -s lint -- arg1 arg2 ...
-    args = session.posargs or locations
-    session.install("flake8")
-    session.run("flake8", *args)
 
 
 @nox.session(python=["3.8"])
@@ -18,6 +13,14 @@ def black(session):
     args = session.posargs or locations
     session.install("black")
     session.run("black", *args)
+
+
+@nox.session(python=["3.8"])
+def lint(session):
+    # override with nox -s lint -- arg1 arg2 ...
+    args = session.posargs or locations
+    session.install("flake8", "flake8-black")
+    session.run("flake8", *args)
 
 
 @nox.session(python=["3.8"])

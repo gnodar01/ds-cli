@@ -58,3 +58,5 @@ Run linting with `nox -s lint` or specify files/directoriess with `nox -s lint -
 Autoformatting is performed with [Black](https://github.com/psf/black).
 
 Run formatting with `nox -s black` or specify files/directors with `nox -s black -- file1 dir1 ...`.
+
+Black is not run by default when running `nox` in isolation, it must be specified.
