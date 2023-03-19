@@ -2,9 +2,9 @@
 
 A CLI helper tool for [Distributed-Something](https://distributedscience.github.io/Distributed-Something/introduction.html)
 
-### Development
+## Development
 
-#### Setup Virtual Environment
+### Setup Virtual Environment
 
 Setup a python environment using the method of your choice.
 
@@ -20,7 +20,7 @@ Using `conda` (replace with any `python >= 3.8`):
 
 Using whatever else you want, like [pyenv](https://github.com/pyenv/pyenv).
 
-#### Install dev tools
+### Install dev tools
 
 Install [Poetry](https://python-poetry.org/)
 
@@ -36,3 +36,9 @@ See [this post](https://medium.com/@cjolowicz/nox-is-a-part-of-your-global-devel
 Let Poetry install the rest from `pyproject.toml`
 
     poetry install
+
+### Testing
+
+[Coverage.py](https://coverage.readthedocs.io/en/7.2.2/) is used for test coverage, alongside [pytest](https://docs.pytest.org/en/7.2.x/), via the [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/) plugin.
+
+Run `pytest --cov`.
