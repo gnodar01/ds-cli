@@ -1,5 +1,5 @@
-import pytest
 import click.testing
+import pytest
 
 
 @pytest.fixture(scope="function")

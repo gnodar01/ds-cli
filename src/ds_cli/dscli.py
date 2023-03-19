@@ -1,7 +1,6 @@
 import rich_click as rclick
 
 from . import __version__, CONTEXT_SETTINGS
-
 from .commands.hello import hello
 
 

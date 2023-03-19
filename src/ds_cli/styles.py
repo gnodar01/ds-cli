@@ -1,4 +1,5 @@
 from os import getenv
+
 import rich_click as rclick
 
 # builtin colors: https://rich.readthedocs.io/en/latest/appendix/colors.html

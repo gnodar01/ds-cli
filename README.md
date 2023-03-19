@@ -51,12 +51,12 @@ Run a specific test with `nox -s tests -- tests/test_TESTNAME`.
 
 ### Static analysis
 
-[Flake8](https://flake8.pycqa.org/en/latest/) is used for linting. Under the hood, it uses [pylint](https://www.pylint.org/), [pyflakes](https://github.com/PyCQA/pyflakes) for invalid python code (errors reported as `F`), [pycodestyle](https://github.com/pycqa/pycodestyle) for [PEP 8](https://peps.python.org/pep-0008/) style checking (`W` for warnings, `E` for errors), and [mccabe](https://github.com/PyCQA/mccabe) for code complexity (errors reported as `C`). This is configured in the `.flake8` file.
-
-Run linting with `nox -s lint` or specify files/directoriess with `nox -s lint -- file1 dir1 ...`.
-
 Autoformatting is performed with [Black](https://github.com/psf/black).
 
 Run formatting with `nox -s black` or specify files/directors with `nox -s black -- file1 dir1 ...`.
 
-Black is not run by default when running `nox` in isolation, it must be specified.
+Black auto-formatting is not run by default when running `nox` in isolation, it must be specified.
+
+[Flake8](https://flake8.pycqa.org/en/latest/) is used for linting. Under the hood, it uses [pylint](https://www.pylint.org/), [pyflakes](https://github.com/PyCQA/pyflakes) for invalid python code (errors reported as `F`), [pycodestyle](https://github.com/pycqa/pycodestyle) for [PEP 8](https://peps.python.org/pep-0008/) style checking (`W` for warnings, `E` for errors), and [mccabe](https://github.com/PyCQA/mccabe) for code complexity (errors reported as `C`). Adherence to Black code style is performed via the [flake8-black](https://github.com/peterjc/flake8-black) plugin (erros reported as `BLK`). Import grouping and ordering is checked against the [Google styleguide](https://google.github.io/styleguide/pyguide.html?showone=Imports_formatting#313-imports-formatting) via the [flake8-import-order](https://github.com/PyCQA/flake8-import-order) plugin (errors reported as `I`). All of these are configured in the `.flake8` file.
+
+Run linting with `nox -s lint` or specify files/directoriess with `nox -s lint -- file1 dir1 ...`.
