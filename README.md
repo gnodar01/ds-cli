@@ -33,6 +33,10 @@ Install [Nox](https://nox.thea.codes/en/stable/)
 
 See [this post](https://medium.com/@cjolowicz/nox-is-a-part-of-your-global-developer-environment-like-poetry-pre-commit-pyenv-or-pipx-1cdeba9198bd) if you're curious as to why we don't install nox via Poetry.
 
+Install [pre-commit](https://pre-commit.com/)
+
+    pip install --user --upgrade pre-commit
+
 Let Poetry install the rest from `pyproject.toml`
 
     poetry install
@@ -86,3 +90,9 @@ Import ordering is not auto-formatted although may in the future by migrating to
 [Safety](https://github.com/pyupio/safety) is uesd for checking project dependencies against known security violations. For example, [insecure-package](https://pypi.org/project/insecure-package/).
 
 Run it with `nox -s safety`.
+
+#### Pre-commit
+
+If you would like to enable the pre-commit hooks, run `pre-commit install`.
+
+The hooks will run on files changed by the commit in question. To trigger hooks automatically run `pre-commit run --all-files`.
