@@ -42,7 +42,7 @@ rclick.rich_click.STYLE_OPTIONS_TABLE_ROW_STYLES = [""]
 rclick.rich_click.STYLE_COMMANDS_TABLE_ROW_STYLES = [""]
 # with of the terminal, None for auto size
 rclick.rich_click.MAX_WIDTH = (
-    int(getenv("TERMINAL_WIDTH")) if getenv("TERMINAL_WIDTH") else 80
+    int(getenv("TERMINAL_WIDTH")) if getenv("TERMINAL_WIDTH") else 80  # type: ignore
 )
 # show positional arguments
 rclick.rich_click.SHOW_ARGUMENTS = True

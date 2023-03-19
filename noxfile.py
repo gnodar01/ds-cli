@@ -3,7 +3,7 @@ import tempfile
 import nox
 
 
-nox.options.sessions = "lint", "tests"
+nox.options.sessions = "lint", "tests", "mypy"
 
 
 locations = "src", "tests", "noxfile.py"
@@ -48,6 +48,13 @@ def lint(session):
         "flake8-bandit",
     )
     session.run("flake8", *args)
+
+
+@nox.session(python=["3.8"])
+def mypy(session):
+    args = session.posargs or locations
+    install_with_constraints(session, "mypy")
+    session.run("mypy", *args)
 
 
 @nox.session(python=["3.8"])
