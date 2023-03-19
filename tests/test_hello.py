@@ -7,6 +7,6 @@ def test_hello_succeeds(runner):
 
 
 def test_hello_world_succeeds(runner):
-    result = runner.invoke(dscli.hello, ['--say=world'])
+    result = runner.invoke(dscli.hello, ["--say=world"])
     assert result.exit_code == 0
-    assert 'world' in result.output
+    assert "world" in result.output
