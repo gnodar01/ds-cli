@@ -13,6 +13,14 @@ def lint(session):
 
 
 @nox.session(python=['3.8'])
+def black(session):
+    # override with nox -s black -- arg1 arg2 ...
+    args = session.posargs or locations
+    session.install('black')
+    session.run('black', *args)
+
+
+@nox.session(python=['3.8'])
 def tests(session):
     # pass along args to pytest
     args = session.posargs or ['--cov']

@@ -54,3 +54,7 @@ Run a specific test with `nox -s tests -- tests/test_TESTNAME`.
 [Flake8](https://flake8.pycqa.org/en/latest/) is used for linting. Under the hood, it uses [pylint](https://www.pylint.org/), [pyflakes](https://github.com/PyCQA/pyflakes) for invalid python code (errors reported as `F`), [pycodestyle](https://github.com/pycqa/pycodestyle) for [PEP 8](https://peps.python.org/pep-0008/) style checking (`W` for warnings, `E` for errors), and [mccabe](https://github.com/PyCQA/mccabe) for code complexity (errors reported as `C`). This is configured in the `.flake8` file.
 
 Run linting with `nox -s lint` or specify files/directoriess with `nox -s lint -- file1 dir1 ...`.
+
+Autoformatting is performed with [Black](https://github.com/psf/black).
+
+Run formatting with `nox -s black` or specify files/directors with `nox -s black -- file1 dir1 ...`.
