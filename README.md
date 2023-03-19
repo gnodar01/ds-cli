@@ -47,4 +47,10 @@ To let nox run across multiple isolated environments, run `nox`.
 
 To avoid nox recreating the virtual environments from scratch on each invocation, run `nox -r`.
 
-Run a specific test with `nox -- tests/test_TESTNAME`.
+Run a specific test with `nox -s tests -- tests/test_TESTNAME`.
+
+### Static analysis
+
+[Flake8](https://flake8.pycqa.org/en/latest/) is used for linting. Under the hood, it uses [pylint](https://www.pylint.org/), [pyflakes](https://github.com/PyCQA/pyflakes) for invalid python code (errors reported as `F`), [pycodestyle](https://github.com/pycqa/pycodestyle) for [PEP 8](https://peps.python.org/pep-0008/) style checking (`W` for warnings, `E` for errors), and [mccabe](https://github.com/PyCQA/mccabe) for code complexity (errors reported as `C`). This is configured in the `.flake8` file.
+
+Run linting with `nox -s lint` or specify files/directoriess with `nox -s lint -- file1 dir1 ...`.

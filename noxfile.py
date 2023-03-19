@@ -1,6 +1,17 @@
 import nox
 
 
+locations = 'src', 'tests', 'noxfile.py'
+
+
+@nox.session(python=['3.8'])
+def lint(session):
+    # override with nox -s lint -- arg1 arg2 ...
+    args = session.posargs or locations
+    session.install('flake8')
+    session.run('flake8', *args)
+
+
 @nox.session(python=['3.8'])
 def tests(session):
     # pass along args to pytest

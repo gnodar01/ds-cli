@@ -12,4 +12,7 @@ from ..styles import DS_GREEN
 )
 def hello(say):
     '''Say Hello to the world'''
-    rprint(f'[{DS_GREEN}]Hello[/]{f", [bold magenta]{say}[/]!" if say else ""}', ':vampire:')
+    rprint(
+        f'[{DS_GREEN}]Hello[/]{f", [bold magenta]{say}[/]!" if say else ""}',
+        ':vampire:'
+    )
