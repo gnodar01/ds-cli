@@ -1,3 +1,5 @@
+import tempfile
+
 import nox
 
 
@@ -27,6 +29,24 @@ def lint(session):
         "flake8-bandit",
     )
     session.run("flake8", *args)
+
+
+@nox.session(python=["3.8"])
+def safety(session):
+    with tempfile.NamedTemporaryFile() as requirements:
+        session.run(
+            "poetry",
+            "export",
+            "--with",
+            "dev",
+            "--without-hashes",
+            "--format=requirements.txt",
+            "--output",
+            requirements.name,
+            external=True,
+        )
+        session.install("safety")
+        session.run("safety", "check", "--file", requirements.name, "--full-report")
 
 
 @nox.session(python=["3.8"])

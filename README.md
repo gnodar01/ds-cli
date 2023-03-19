@@ -82,3 +82,7 @@ All of these are configured in the `.flake8` file.
 Run linting with `nox -s lint` or specify files/directoriess with `nox -s lint -- file1 dir1 ...`.
 
 Import ordering is not auto-formatted although may in the future by migrating to [flake8-isort](https://github.com/gforcada/flake8-isort).
+
+[Safety](https://github.com/pyupio/safety) is uesd for checking project dependencies against known security violations. For example, [insecure-package](https://pypi.org/project/insecure-package/).
+
+Run it with `nox -s safety`.
