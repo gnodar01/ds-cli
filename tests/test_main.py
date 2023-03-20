@@ -1,6 +1,6 @@
 from click.testing import CliRunner
 
-from dscli import dscli
+from ds_helper import dscli
 
 
 def test_main_succeeds(runner: CliRunner) -> None:

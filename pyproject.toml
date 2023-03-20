@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "dscli"
+name = "ds-helper"
 version = "0.1.0"
 description = "A CLI helper for [Distributed-Something](https://github.com/DistributedScience/Distributed-Something)"
 authors = ["Nodar Gogoberidze <gnodar01@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 homepage = "https://distributedscience.github.io/Distributed-Something/introduction.html"
-repository = "https://github.com/gnodar01/dscli"
+repository = "https://github.com/gnodar01/ds-helper"
 keywords = ["Distributed-Something", "DistributedScience"]
 
 [tool.poetry.dependencies]
@@ -14,7 +14,7 @@ python = "^3.8.1"
 rich-click = "^1.6.1"
 
 [tool.poetry.scripts]
-dscli = "dscli.dscli:main"
+dscli = "ds_helper.dscli:main"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.2.2"
@@ -47,7 +47,7 @@ source = ["src", "*/site-packages"]
 branch = true
 # (multi-string) A list of packages or directories
 # the source to measure during execution
-source = ["dscli"]
+source = ["ds_helper"]
 
 [tool.coverage.report]
 # When running a summary report, show missing lines

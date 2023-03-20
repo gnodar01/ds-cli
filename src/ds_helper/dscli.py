@@ -1,7 +1,7 @@
 import rich_click as rclick
 
-from dscli import __version__, CONTEXT_SETTINGS
-from dscli.commands.hello import hello
+from . import __version__, CONTEXT_SETTINGS
+from .commands.hello import hello
 
 
 @rclick.version_option(__version__, "-v", "--version")

@@ -1,7 +1,7 @@
-# dscli
+# ds-helper
 
-[![Tests](https://github.com/gnodar01/dscli/workflows/Tests/badge.svg)](https://github.com/gnodar01/dscli/actions?workflow=Tests)
-[![PyPI](https://img.shields.io/pypi/v/dscli.svg)](https://pypi.org/project/dscli/)
+[![Tests](https://github.com/gnodar01/ds-helper/workflows/Tests/badge.svg)](https://github.com/gnodar01/ds-helper/actions?workflow=Tests)
+[![PyPI](https://img.shields.io/pypi/v/ds-helper.svg)](https://pypi.org/project/ds-helper/)
 
 A CLI helper tool for [Distributed-Something](https://distributedscience.github.io/Distributed-Something/introduction.html)
 
@@ -13,13 +13,13 @@ Setup a python environment using the method of your choice.
 
 Using the builtin `venv`:
 
-    python -m venv dscli
-    source dscli/bin/activate
+    python -m venv <ENV_NAME>
+    source <ENV_NAME>/bin/activate
 
 Using `conda` (replace with any `python >= 3.8`):
 
-    conda create -n dscli python=3.8
-    conda activate dscli
+    conda create -n <ENV_NAME> python=3.8
+    conda activate <ENV_NAME>
 
 Using whatever else you want, like [pyenv](https://github.com/pyenv/pyenv).
 
