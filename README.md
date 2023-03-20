@@ -1,6 +1,6 @@
 # ds-cli
 
-[![Tests](https://github.com/<your-username>/hypermodern-python/workflows/Tests/badge.svg)](https://github.com/<your-username>/hypermodern-python/actions?workflow=Tests)
+[![Tests](https://github.com/gnodar01/ds-cli/workflows/Tests/badge.svg)](https://github.com/gnodar01/ds-cli/actions?workflow=Tests)
 
 A CLI helper tool for [Distributed-Something](https://distributedscience.github.io/Distributed-Something/introduction.html)
 
