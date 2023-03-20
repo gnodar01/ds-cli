@@ -1,0 +1,17 @@
+name: Tests
+on: push
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v3
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+          architecture: x64
+      - name: install dev deps
+        run: pip install "nox==2022.11.21" "poetry==1.4.0"
+      - name: run nox
+        run: nox -s mypy lint safety tests
