@@ -18,7 +18,7 @@ rclick.rich_click.USE_RICH_MARKUP = True
 
 # 'Usage:' text
 rclick.rich_click.STYLE_USAGE = "italic"
-# text after 'Usage', ie 'dscli [] ...'
+# text after 'Usage', ie 'dsreify [] ...'
 rclick.rich_click.STYLE_USAGE_COMMAND = f"bold {DS_PURPLE_LIGHT}"
 # text of 'OPTIONS', 'COMMAND', and 'ARGS' in usage string
 rclick.rich_click.STYLE_ARGUMENT = f"bold {RICH_GREEN}"

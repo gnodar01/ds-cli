@@ -1,7 +1,7 @@
-# ds-helper
+# ds-reify
 
-[![Tests](https://github.com/gnodar01/ds-helper/workflows/Tests/badge.svg)](https://github.com/gnodar01/ds-helper/actions?workflow=Tests)
-[![PyPI](https://img.shields.io/pypi/v/ds-helper.svg)](https://pypi.org/project/ds-helper/)
+[![Tests](https://github.com/gnodar01/ds-reify/workflows/Tests/badge.svg)](https://github.com/gnodar01/ds-reify/actions?workflow=Tests)
+[![PyPI](https://img.shields.io/pypi/v/ds-reify.svg)](https://pypi.org/project/ds-reify/)
 
 A CLI helper tool for [Distributed-Something](https://distributedscience.github.io/Distributed-Something/introduction.html)
 
