@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ds-cli"
+name = "dscli"
 version = "0.1.0"
 description = "A CLI helper for [Distributed-Something](https://github.com/DistributedScience/Distributed-Something)"
 authors = ["Nodar Gogoberidze <gnodar01@gmail.com>"]

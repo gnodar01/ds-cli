@@ -1,7 +1,7 @@
-# ds-cli
+# dscli
 
 [![Tests](https://github.com/gnodar01/ds-cli/workflows/Tests/badge.svg)](https://github.com/gnodar01/ds-cli/actions?workflow=Tests)
-[![PyPI](https://img.shields.io/pypi/v/ds-cli.svg)](https://pypi.org/project/ds-cli/)
+[![PyPI](https://img.shields.io/pypi/v/dscli.svg)](https://pypi.org/project/dscli/)
 
 A CLI helper tool for [Distributed-Something](https://distributedscience.github.io/Distributed-Something/introduction.html)
 
