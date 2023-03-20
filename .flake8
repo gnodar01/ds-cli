@@ -3,7 +3,7 @@ select = ANN,B,B9,BLK,C,E,F,I,S,W
 ignore = E203,E501,W503
 max-complexity = 10
 max-line-length = 80
-application-import-names = ds_cli,tests
+application-import-names = dscli,tests
 import-order-style = google
 # bandit flags usee of assert, ignore for tests
 per-file-ignores =
