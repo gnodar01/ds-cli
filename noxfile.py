@@ -27,7 +27,7 @@ def install_with_constraints(session, *args, **kwargs):
         session.install(f"--constraint={requirements.name}", *args, **kwargs)
 
 
-@nox.session(python=["3.8"])
+@nox.session(python=["3.8", "3.9", "3.10"])
 def black(session):
     # override with nox -s black -- arg1 arg2 ...
     args = session.posargs or locations
@@ -35,7 +35,7 @@ def black(session):
     session.run("black", *args)
 
 
-@nox.session(python=["3.8"])
+@nox.session(python=["3.8", "3.9", "3.10"])
 def lint(session):
     # override with nox -s lint -- arg1 arg2 ...
     args = session.posargs or locations
@@ -51,14 +51,14 @@ def lint(session):
     session.run("flake8", *args)
 
 
-@nox.session(python=["3.8"])
+@nox.session(python=["3.8", "3.9", "3.10"])
 def mypy(session):
     args = session.posargs or locations
     install_with_constraints(session, "mypy")
     session.run("mypy", *args)
 
 
-@nox.session(python=["3.8"])
+@nox.session(python=["3.8", "3.9", "3.10"])
 def safety(session):
     with tempfile.NamedTemporaryFile() as requirements:
         session.run(
@@ -76,7 +76,7 @@ def safety(session):
         session.run("safety", "check", "--file", requirements.name, "--full-report")
 
 
-@nox.session(python=["3.8"])
+@nox.session(python=["3.8", "3.9", "3.10"])
 def tests(session):
     # pass along args to pytest
     args = session.posargs or ["--cov"]
