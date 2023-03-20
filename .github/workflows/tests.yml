@@ -3,13 +3,17 @@ on: push
 jobs:
   tests:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
+    name: Python ${{ matrix.python-version }}
     steps:
       - name: checkout repo
         uses: actions/checkout@v3
       - name: setup python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.8"
+          python-version: ${{ matrix.python-version }}
           architecture: x64
       - name: install dev deps
         run: pip install "nox==2022.11.21" "poetry==1.4.0"
