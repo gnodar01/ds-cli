@@ -10,7 +10,7 @@ def main() -> None:
     """
     Command Line Interface for [bold #59559E link=https://distributedscience.github.io/Distributed-Something]Distributed-Something[/]
     """  # noqa: B950
-    ...
+    ...  # pragma: no cover
 
 
 main.add_command(hello)
