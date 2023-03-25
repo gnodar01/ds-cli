@@ -2,6 +2,7 @@ import rich_click as rclick
 
 from . import __version__, CONTEXT_SETTINGS
 from .commands.hello import hello
+from .commands.init import init
 
 
 @rclick.version_option(__version__, "-v", "--version")
@@ -14,3 +15,4 @@ def main() -> None:
 
 
 main.add_command(hello)
+main.add_command(init)
