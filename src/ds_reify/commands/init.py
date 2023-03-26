@@ -36,7 +36,7 @@ def create_project_dir(project_dir: str) -> None:
 
 def prompt_project_dir(project_name: str) -> str:
     """Get the project directory"""
-    default_location = f"{os.getcwd()}/{project_name}"
+    default_location = f"{os.getcwd()}/{project_name.lower().replace(' ', '_')}"
     location = prompt("Project Location", default=default_location)
     return location
 
