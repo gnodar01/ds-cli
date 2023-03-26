@@ -7,5 +7,5 @@ application-import-names = ds_reify,tests
 import-order-style = google
 # bandit flags usee of assert, ignore for tests
 per-file-ignores =
-    tests/*:S101
+    tests/*:ANN401,S101
     noxfile.py:ANN
