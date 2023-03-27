@@ -29,5 +29,6 @@ MANIFEST
 .cache
 .pytest_cache/
 .coverage
+.mypy_cache/
 
 .vscode
